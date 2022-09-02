@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Romka04.RedirectServer", "Romka04.RedirectServer\Romka04.RedirectServer.csproj", "{F92E9F9B-9C98-4E88-B643-85CFD1912096}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Romka04.RedirectServer.Tests", "Romka04.RedirectServer.Tests\Romka04.RedirectServer.Tests.csproj", "{0355847C-E98D-4FDD-8E4B-C610BA96449E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F92E9F9B-9C98-4E88-B643-85CFD1912096}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F92E9F9B-9C98-4E88-B643-85CFD1912096}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F92E9F9B-9C98-4E88-B643-85CFD1912096}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F92E9F9B-9C98-4E88-B643-85CFD1912096}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0355847C-E98D-4FDD-8E4B-C610BA96449E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0355847C-E98D-4FDD-8E4B-C610BA96449E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0355847C-E98D-4FDD-8E4B-C610BA96449E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0355847C-E98D-4FDD-8E4B-C610BA96449E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A8E4E5F6-5507-4B1B-B810-AE5BA902424B}
+	EndGlobalSection
+EndGlobal

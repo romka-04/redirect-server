@@ -13,21 +13,18 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Echo SHA Local Variable (another)
-      run: echo "GITHUB_SHA=${{env.GITHUB_SHA}} GITHUB_SHA=${{github.GITHUB_HEAD_REF}}"
-
     - name: Echo SHA Local Variable (secrets)
       run: echo "GITHUB_REF=$GITHUB_REF GITHUB_HEAD_REF=$GITHUB_HEAD_REF GITHUB_SHA=$GITHUB_SHA"
 
-    #- name: DockerHub Login
-    #  run: echo "${{secrets.DOCKER_PASSWORD}}" | docker login -u "${{secrets.DOCKER_ID}}" --password-stdin
+    - name: DockerHub Login
+      run: echo "${{secrets.DOCKER_PASSWORD}}" | docker login -u "${{secrets.DOCKER_ID}}" --password-stdin
 
-    #- name: Build the Docker image
-    #  run: docker build . -f ./Romka04.RedirectServer/Dockerfile -t romka04/redirect-server:$(SHA) --tag romka04/redirect-server:latest
+    - name: Build the Docker image
+      run: docker build . -f ./Romka04.RedirectServer/Dockerfile -t romka04/redirect-server:$GITHUB_SHA --tag romka04/redirect-server:latest
 
-    #- name: Deploy 'latest' Docker Image
-    #  run: docker push romka04/redirect-server:latest
+    - name: Deploy 'latest' Docker Image
+      run: docker push romka04/redirect-server:latest
       
-    #- name: Deploy Docker Image with Commit Tag
-    #  run: docker push romka04/redirect-server:$(SHA)
+    - name: Deploy Docker Image with Commit Tag
+      run: docker push romka04/redirect-server:$GITHUB_SHA
 

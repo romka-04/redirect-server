@@ -10,14 +10,11 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    env:
-      SHA: $(git rev-parse HEAD)
-
     steps:
     - uses: actions/checkout@v3
 
     - name: Echo SHA Local Variable
-      run: echo $SHA
+      run: echo "GITHUB_REF=${{env.GITHUB_REF}} GITHUB_HEAD_REF=${{env.GITHUB_HEAD_REF}}"
       
     #- name: DockerHub Login
     #  run: echo "${{secrets.DOCKER_PASSWORD}}" | docker login -u "${{secrets.DOCKER_ID}}" --password-stdin

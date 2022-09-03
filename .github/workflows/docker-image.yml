@@ -18,6 +18,6 @@ jobs:
 
     - name: Echo SHA Local Variable
       run: echo "$SHA"
-	
+      
     - name: Build the Docker image
       run: docker build . --file ./Romka04.RedirectServer/Dockerfile --tag romka04/redirect-server:$(date +%s) --tag romka04/redirect-server:latest

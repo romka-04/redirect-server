@@ -10,11 +10,11 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    env:
+      SHA: git rev-parse HEAD
+
     steps:
     - uses: actions/checkout@v3
-
-    - name: Set SHA Local Variable
-      run: "SHA=$(git rev-parse HEAD)"
 
     - name: Echo SHA Local Variable
       run: echo $SHA

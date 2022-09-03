@@ -18,12 +18,6 @@ jobs:
 
     - name: Build the Docker image
       run: docker build . -f ./Romka04.RedirectServer/Dockerfile -t romka04/redirect-server:$GITHUB_SHA --tag romka04/redirect-server:latest
-
-  deploy:
-    on:
-      push:
-        branches:
-          - main
           
     - name: Deploy 'latest' Docker Image
       run: docker push romka04/redirect-server:latest

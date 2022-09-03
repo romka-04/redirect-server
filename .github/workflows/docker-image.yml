@@ -19,8 +19,9 @@ jobs:
     - name: Echo SHA Local Variable (another)
       run: echo "GITHUB_SHA=${{env.GITHUB_SHA}} GITHUB_SHA=${{github.GITHUB_HEAD_REF}}"
 
-    - name: Echo SHA Local Variable No Prefixes
-      run: echo "GITHUB_REF=${{GITHUB_REF}} GITHUB_HEAD_REF=${{GITHUB_HEAD_REF}} GITHUB_SHA=${{GITHUB_SHA}}"
+    - name: Echo SHA Local Variable (secrets)
+      run: echo "GITHUB_REF=${{secrets.GITHUB_REF}} GITHUB_HEAD_REF=${{secrets.GITHUB_HEAD_REF}} GITHUB_SHA=${{secrets.GITHUB_SHA}}"
+
     #- name: DockerHub Login
     #  run: echo "${{secrets.DOCKER_PASSWORD}}" | docker login -u "${{secrets.DOCKER_ID}}" --password-stdin
 
